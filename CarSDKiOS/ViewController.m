@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "WelcomeViewController.h"
 
 @interface ViewController ()
 
@@ -16,10 +17,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(100, 200, 100, 44)];
+    [button setTitle:@"去看车" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
+    button.layer.borderWidth = 1.0;
+    [self.view addSubview:button];
+    
 }
 
-
+- (void)buttonClicked {
+    WelcomeViewController *vc = [[WelcomeViewController alloc] initWithCarName:@"CA7457-JCSMBW"];
+    [self presentViewController:vc animated:YES completion:nil];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
