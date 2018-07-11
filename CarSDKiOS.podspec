@@ -91,8 +91,9 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "CarAppSDK", "CarSDKiOS/CarAppSDK/*.{h,m}"
+  s.source_files  = "CarAppSDK", "CarSDKiOS/CarAppSDK/*.{h,m,c}"
   s.exclude_files = "Classes/Exclude"
+  spec.resource = 'CarSDKiOS/CarAppSDK/CarResource.bundle'
 
   # s.public_header_files = "Classes/**/*.h"
 
