@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CarSDKiOS"
-  s.version      = "1.0.0"
+  s.version      = "1.0.2"
   s.summary      = "CarSDKiOS"
 
   # This description is used to generate tags and improve search results.
@@ -93,7 +93,7 @@ Pod::Spec.new do |s|
 
   s.source_files  = "CarAppSDK", "CarSDKiOS/CarAppSDK/*.{h,m,c}"
   s.exclude_files = "Classes/Exclude"
-  spec.resource = 'CarSDKiOS/CarAppSDK/CarResource.bundle'
+  s.resource = "CarSDKiOS/CarAppSDK/CarResource.bundle"
 
   # s.public_header_files = "Classes/**/*.h"
 
@@ -121,7 +121,7 @@ Pod::Spec.new do |s|
   # s.framework  = "SomeFramework"
   # s.frameworks = "SomeFramework", "AnotherFramework"
 
-  # s.library   = "iconv"
+  # s.library   = "z"
   # s.libraries = "iconv", "xml2"
 
 
@@ -133,7 +133,7 @@ Pod::Spec.new do |s|
 
   # s.requires_arc = true
 
-  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  # s.dependency "JSONKit", "~> 1.4"
+  # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/memory" }
+  # s.dependency "SSZipArchive"
 
 end

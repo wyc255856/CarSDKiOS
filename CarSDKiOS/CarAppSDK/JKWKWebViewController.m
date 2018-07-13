@@ -98,7 +98,11 @@
     _webView.scrollView.bounces = false;
     
     //iOS 11对安全区域做了一些修改
-    _webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    if (@available(iOS 11.0, *)) {
+        _webView.scrollView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        // Fallback on earlier versions
+    }
     
     
     //判断webview是/否加载本地
