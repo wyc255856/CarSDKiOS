@@ -27,7 +27,7 @@
 }
 
 - (void)buttonClicked {
-    WelcomeViewController *vc = [[WelcomeViewController alloc] initWithCarName:@"CA7457-JCSMBW"];
+    WelcomeViewController *vc = [[WelcomeViewController alloc] initWithCarName:nil];
     [self presentViewController:vc animated:YES completion:nil];
 }
 - (void)didReceiveMemoryWarning {

@@ -465,4 +465,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Woverriding-method-mismatch"
+#pragma clang diagnostic ignored "-Wmismatched-return-types"
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
+#pragma clang diagnostic pop
+{
+    return UIInterfaceOrientationMaskLandscapeRight;
+}
 @end
