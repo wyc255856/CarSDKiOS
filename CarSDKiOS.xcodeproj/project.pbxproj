@@ -26,7 +26,6 @@
 		4B825BB420F5D06E00C2FD64 /* CAR_AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B825B7320F5D06E00C2FD64 /* CAR_AFNetworkReachabilityManager.m */; };
 		4B825BB520F5D06E00C2FD64 /* CAR_AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B825B7620F5D06E00C2FD64 /* CAR_AFHTTPRequestOperation.m */; };
 		4B825BB620F5D06E00C2FD64 /* CAR_AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B825B7720F5D06E00C2FD64 /* CAR_AFHTTPRequestOperationManager.m */; };
-		4B825BB720F5D06E00C2FD64 /* CarResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4B825B7820F5D06E00C2FD64 /* CarResource.bundle */; };
 		4B825BB820F5D06E00C2FD64 /* JKEventHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B825B7C20F5D06E00C2FD64 /* JKEventHandler.m */; };
 		4B825BB920F5D06E00C2FD64 /* CAR_AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B825B7E20F5D06E00C2FD64 /* CAR_AFURLConnectionOperation.m */; };
 		4B825BBA20F5D06E00C2FD64 /* prng.c in Sources */ = {isa = PBXBuildFile; fileRef = 4B825B8420F5D06E00C2FD64 /* prng.c */; };
@@ -48,6 +47,9 @@
 		4B92A7D120F5AB89005B6EEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B92A7D020F5AB89005B6EEE /* Assets.xcassets */; };
 		4B92A7D420F5AB89005B6EEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B92A7D220F5AB89005B6EEE /* LaunchScreen.storyboard */; };
 		4B92A7D720F5AB89005B6EEE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B92A7D620F5AB89005B6EEE /* main.m */; };
+		53B601AE20FDFD2B000DAC14 /* ChooseCarModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B601AD20FDFD2B000DAC14 /* ChooseCarModelViewController.m */; };
+		53B601B220FDFE9F000DAC14 /* CarResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 53B601B120FDFE9E000DAC14 /* CarResource.bundle */; };
+		53B601B620FE011A000DAC14 /* UIView+CARAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 53B601B520FE0119000DAC14 /* UIView+CARAdd.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -87,7 +89,6 @@
 		4B825B7520F5D06E00C2FD64 /* ShareManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareManager.h; sourceTree = "<group>"; };
 		4B825B7620F5D06E00C2FD64 /* CAR_AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAR_AFHTTPRequestOperation.m; sourceTree = "<group>"; };
 		4B825B7720F5D06E00C2FD64 /* CAR_AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAR_AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
-		4B825B7820F5D06E00C2FD64 /* CarResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CarResource.bundle; sourceTree = "<group>"; };
 		4B825B7920F5D06E00C2FD64 /* LoadFailedAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadFailedAlertView.h; sourceTree = "<group>"; };
 		4B825B7A20F5D06E00C2FD64 /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
 		4B825B7B20F5D06E00C2FD64 /* entropy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = entropy.h; sourceTree = "<group>"; };
@@ -140,6 +141,12 @@
 		4B92A7D320F5AB89005B6EEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B92A7D520F5AB89005B6EEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B92A7D620F5AB89005B6EEE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		53B601AC20FDFD2B000DAC14 /* ChooseCarModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseCarModelViewController.h; sourceTree = "<group>"; };
+		53B601AD20FDFD2B000DAC14 /* ChooseCarModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseCarModelViewController.m; sourceTree = "<group>"; };
+		53B601B120FDFE9E000DAC14 /* CarResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = CarResource.bundle; sourceTree = "<group>"; };
+		53B601B320FE0119000DAC14 /* CARCategoriesMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARCategoriesMacro.h; sourceTree = "<group>"; };
+		53B601B420FE0119000DAC14 /* UIView+CARAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CARAdd.h"; sourceTree = "<group>"; };
+		53B601B520FE0119000DAC14 /* UIView+CARAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CARAdd.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +163,8 @@
 		4B825B5220F5D06E00C2FD64 /* CarAppSDK */ = {
 			isa = PBXGroup;
 			children = (
+				53B601AC20FDFD2B000DAC14 /* ChooseCarModelViewController.h */,
+				53B601AD20FDFD2B000DAC14 /* ChooseCarModelViewController.m */,
 				4B825B5320F5D06E00C2FD64 /* prng.h */,
 				4B825B5420F5D06E00C2FD64 /* WelcomeViewController.h */,
 				4B825B5520F5D06E00C2FD64 /* aeskey.c */,
@@ -167,6 +176,7 @@
 				4B825B5C20F5D06E00C2FD64 /* JKWKWebViewHandler.h */,
 				4B825B5D20F5D06E00C2FD64 /* CarBundleTool.h */,
 				4B825B5E20F5D06E00C2FD64 /* aestab.h */,
+				53B601B120FDFE9E000DAC14 /* CarResource.bundle */,
 				4B825B5F20F5D06E00C2FD64 /* JKEventHandler+Car.m */,
 				4B825B6020F5D06E00C2FD64 /* UIColor+Util.h */,
 				4B825B6120F5D06E00C2FD64 /* unzip.c */,
@@ -186,13 +196,15 @@
 				4B825B6F20F5D06E00C2FD64 /* CAR_AFURLSessionManager.h */,
 				4B825B7020F5D06E00C2FD64 /* LoadingProgressView.h */,
 				4B825B7120F5D06E00C2FD64 /* mztools.c */,
+				53B601B320FE0119000DAC14 /* CARCategoriesMacro.h */,
+				53B601B420FE0119000DAC14 /* UIView+CARAdd.h */,
+				53B601B520FE0119000DAC14 /* UIView+CARAdd.m */,
 				4B825B7220F5D06E00C2FD64 /* sha1.c */,
 				4B825B7320F5D06E00C2FD64 /* CAR_AFNetworkReachabilityManager.m */,
 				4B825B7420F5D06E00C2FD64 /* brg_types.h */,
 				4B825B7520F5D06E00C2FD64 /* ShareManager.h */,
 				4B825B7620F5D06E00C2FD64 /* CAR_AFHTTPRequestOperation.m */,
 				4B825B7720F5D06E00C2FD64 /* CAR_AFHTTPRequestOperationManager.m */,
-				4B825B7820F5D06E00C2FD64 /* CarResource.bundle */,
 				4B825B7920F5D06E00C2FD64 /* LoadFailedAlertView.h */,
 				4B825B7A20F5D06E00C2FD64 /* SSZipArchive.h */,
 				4B825B7B20F5D06E00C2FD64 /* entropy.h */,
@@ -331,7 +343,7 @@
 			files = (
 				4B92A7D420F5AB89005B6EEE /* LaunchScreen.storyboard in Resources */,
 				4B825BC420F5D06E00C2FD64 /* Info.plist in Resources */,
-				4B825BB720F5D06E00C2FD64 /* CarResource.bundle in Resources */,
+				53B601B220FDFE9F000DAC14 /* CarResource.bundle in Resources */,
 				4B92A7D120F5AB89005B6EEE /* Assets.xcassets in Resources */,
 				4B92A7CF20F5AB89005B6EEE /* Main.storyboard in Resources */,
 			);
@@ -353,7 +365,9 @@
 				4B825BBE20F5D06E00C2FD64 /* CarBundleTool.m in Sources */,
 				4B825BAE20F5D06E00C2FD64 /* CAR_AFURLRequestSerialization.m in Sources */,
 				4B825BB520F5D06E00C2FD64 /* CAR_AFHTTPRequestOperation.m in Sources */,
+				53B601AE20FDFD2B000DAC14 /* ChooseCarModelViewController.m in Sources */,
 				4B825BAF20F5D06E00C2FD64 /* fileenc.c in Sources */,
+				53B601B620FE011A000DAC14 /* UIView+CARAdd.m in Sources */,
 				4B825BA420F5D06E00C2FD64 /* hmac.c in Sources */,
 				4B825BB820F5D06E00C2FD64 /* JKEventHandler.m in Sources */,
 				4B92A7CC20F5AB89005B6EEE /* ViewController.m in Sources */,

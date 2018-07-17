@@ -38,7 +38,13 @@
     
     //    1.设置请求路径
     NSString *urlBackStr=[NSString stringWithFormat:@"?model=%@&mode=%lu&haveLocalPackaged=%lu&version=v%@&upLoad=%@",sCarName,nWebViewLoadMode, nHaveLocal,[userDefaults objectForKey:@"localVersion"],[userDefaults objectForKey:@"upLoad"]];
-    [[JKEventHandler shareInstance].webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString: [NSString stringWithFormat:@"%@%@",SettingURLByType(sCarName),urlBackStr]]]];
+    NSLog(@"%@",NSStringFromClass([[userDefaults objectForKey:@"Visitor"] class]));
+    NSString *sVisitor = [userDefaults objectForKey:@"Visitor"];
+    if([@"YES" compare:sVisitor] == NSOrderedSame){
+        [[JKEventHandler shareInstance].webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString: [NSString stringWithFormat:@"%@%@",VisitorSettingURLByType(sCarName),urlBackStr]]]];
+    }else{
+        [[JKEventHandler shareInstance].webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString: [NSString stringWithFormat:@"%@%@",SettingURLByType(sCarName),urlBackStr]]]];
+    }
 }
 
 /*

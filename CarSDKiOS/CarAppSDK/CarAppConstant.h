@@ -53,8 +53,7 @@
 //在线设置页面web URL
 #define SettingURL   (@"http://haoweisys.com/C217/C217_1/pages/set.html")
 #define SettingURLByType(sType)   ([NSString stringWithFormat:@"%@%@/pages/setPhone.html",BaseURL,sType])
-
-
+#define VisitorSettingURLByType(sType)   ([NSString stringWithFormat:@"%@%@/pages/set.html",BaseURL,sType])
 
 // 是否下载本地资源包状态
 typedef NS_ENUM(NSUInteger, nState) {

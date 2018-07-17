@@ -8,6 +8,7 @@
 
 #import "WelcomeViewController.h"
 #import "JKWKWebViewController.h"
+#import "ChooseCarModelViewController.h"
 #import "CarAppConstant.h"
 #import "CAR_AFNetworking.h"
 #import "CarBundleTool.h"
@@ -16,6 +17,7 @@
     int _timeCount;
     BOOL Finish;
     BOOL Splash;
+    BOOL Visitor;
 }
 @property (nonatomic, strong) UIImageView   *bgSplashImageView;   //闪屏背景图片
 @property (nonatomic, strong) UIImageView   *bgDisclaimerImageView;   //免责声明背景图片
@@ -37,20 +39,42 @@
 
 -(id) initWithCarName: (NSString*) carName{
     if(self = [super init]){
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         Splash = YES;
-        if(carName){
+        if(![self isBlankString:carName]){
             NSString *sModolName = kFuncGetCarTypeByCarName(carName);
             if(!sModolName){
                 sModolName = typeManualComfortable;
             }
-            NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
             [userDefaults setObject:sModolName  forKey:@"chooseCarModelName"];
-            [userDefaults synchronize];
+            Visitor = NO;
+            [userDefaults setObject:@"NO" forKey:@"Visitor"];
+
+        }else{
+            [userDefaults setObject:@"YES" forKey:@"Visitor"];
+            Visitor = YES;
         }
+        [userDefaults synchronize];
     }
     return self;
 }
-
+- (BOOL)isBlankString:(NSString *)aStr {
+    if (!aStr) {
+        return YES;
+    }
+    if ([aStr isKindOfClass:[NSNull class]]) {
+        return YES;
+    }
+    if (!aStr.length) {
+        return YES;
+    }
+    NSCharacterSet *set = [NSCharacterSet whitespaceAndNewlineCharacterSet];
+    NSString *trimmedStr = [aStr stringByTrimmingCharactersInSet:set];
+    if (!trimmedStr.length) {
+        return YES;
+    }
+    return NO;
+}
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Woverriding-method-mismatch"
 #pragma clang diagnostic ignored "-Wmismatched-return-types"
@@ -186,11 +210,14 @@
     
     //获取服务器最新资源版本号
     [self getAppNewVersion];
-    if(strCarName){
+    if(Visitor == NO){
         JKWKWebViewController *jkVC = [JKWKWebViewController new];
         jkVC.url = [NSString stringWithFormat:@"%@%@",BaseURL,strCarName];
         jkVC.bottomViewController = self;
         [self presentViewController:jkVC  animated:NO completion:nil];
+    }else{
+        ChooseCarModelViewController *vc = [[ChooseCarModelViewController alloc] init];
+        [self presentViewController:vc  animated:NO completion:nil];
     }
 }
 
