@@ -442,6 +442,7 @@
  */
 -(void) goJKWKWebViewWithURL: (NSString*) url{
     JKWKWebViewController *jkVC = [JKWKWebViewController new];
+    jkVC.bottomViewController = self;
     //    NSString *url = [NSString stringWithFormat:@"file://%@",[[NSBundle mainBundle] pathForResource:@"test" ofType:@"html"]];
     jkVC.url = url;
     [self presentViewController:jkVC  animated:NO completion:nil];
@@ -473,4 +474,18 @@
 {
     return UIInterfaceOrientationMaskLandscapeRight;
 }
+
+/**
+ 退出H5页面
+ */
+- (void)exitH5View {
+    __weak __typeof(self) weakSelf = self;
+    [self dismissViewControllerAnimated:NO completion:^{
+        __strong typeof(weakSelf)strongSelf=weakSelf;
+        if ([strongSelf.bottomViewController respondsToSelector:@selector(exitH5View)]) {
+            [strongSelf.bottomViewController exitH5View];
+        }
+    }];
+}
+
 @end

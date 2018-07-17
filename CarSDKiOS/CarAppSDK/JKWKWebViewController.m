@@ -628,7 +628,9 @@ completionHandler:(void (^)(NSString * __nullable result))completionHandler {
     __weak __typeof(self) weakSelf = self;
     [self dismissViewControllerAnimated:NO completion:^{
         __strong typeof(weakSelf)strongSelf=weakSelf;
-        [strongSelf.bottomViewController exitH5View];
+        if ([strongSelf.bottomViewController respondsToSelector:@selector(exitH5View)]) {
+            [strongSelf.bottomViewController exitH5View];
+        }
     }];
 }
 

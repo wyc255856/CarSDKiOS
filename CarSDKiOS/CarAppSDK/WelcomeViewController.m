@@ -217,6 +217,7 @@
         [self presentViewController:jkVC  animated:NO completion:nil];
     }else{
         ChooseCarModelViewController *vc = [[ChooseCarModelViewController alloc] init];
+        vc.bottomViewController = self;
         [self presentViewController:vc  animated:NO completion:nil];
     }
 }

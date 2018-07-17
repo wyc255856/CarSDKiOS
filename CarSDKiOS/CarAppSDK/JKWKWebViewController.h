@@ -10,7 +10,7 @@
 #import "WelcomeViewController.h"
 
 @interface JKWKWebViewController : UIViewController
-@property (nonatomic, weak) WelcomeViewController *bottomViewController;
+@property (nonatomic, weak) id bottomViewController;
 @property (nonatomic, strong) NSString *url;
 @property (nonatomic, assign, getter=isValue) BOOL isGoBack;
 

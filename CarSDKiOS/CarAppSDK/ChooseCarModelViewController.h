@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface ChooseCarModelViewController : UIViewController
+@property (nonatomic, weak) id bottomViewController;
 
+/**
+ 退出 SDK 方法，业务方无需调用这个方法，SDK 已经做了处理
+ */
+- (void)exitH5View;
 @end
